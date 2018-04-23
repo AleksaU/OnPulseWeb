@@ -1,0 +1,204 @@
+@mainColor: #f6782f;
+@FlagLeft: 20px;
+@FlagWidth: 85px;
+@CartWidth: 300px;
+@NavigationHeight: 85px;
+@CartHeightBut: 105px;
+@RowHeight: 115px;
+
+@import "pizza/pizza-card";
+@import "pizza/cart";
+@import "pizza/topPanel";
+@import "pizza/toOrder";
+  body {
+    position: relative;
+   // rgba(240, 206, 20, 0.09);
+    background-color: azure;
+    padding-bottom: 100px;
+    margin-right:@CartWidth ;
+    margin-top: @NavigationHeight;
+  }
+
+.container{
+  width: 100%;
+  padding: 0;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  margin: auto;
+  max-width: 900px;
+  margin-bottom: 10px;
+  right:@CartWidth;
+}
+.thumbnail {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.thumbnail .caption {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 0;
+}
+.txt {
+  padding: 9px;
+  padding-bottom: 0;
+}
+.cl {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+
+
+
+
+//.name{
+//  line-height: 16px;
+//  font-size: 20px;
+//  color: #ec890e;
+//
+//}
+
+.btn {
+  display: inline-block;
+  padding: 6px 10px;
+  margin-bottom: 0;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.42857143;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  user-select: none;
+  background-image: none;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+
+.btn-circle{
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding: 6px 0;
+  font-size: 12px;
+  line-height: 1.428571429;
+  border-radius: 15px;
+}
+
+.btn-danger{
+  background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+  background-repeat: repeat-x;
+  border-color: #b92c28;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+
+}
+.delete {
+  background-image: linear-gradient(to bottom, #d9a22d 0, #f2c158 100%);
+  background-repeat: repeat-x;
+  border-color: #e2c139;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+}
+
+
+
+
+
+
+
+
+
+
+.count, .amount_of_orders{
+  vertical-align: middle;
+  font-size: 16px;
+  padding: 4px 8px 4px 8px;
+  display: inline-block;
+  color: white;
+  background-color: orange;
+  border-radius: 50px;
+
+}
+
+
+
+
+.pizza_types {
+  display: inline-block;
+  align-content: center;
+
+  color: orange;
+  text-align: center;
+  li.active{
+    a, a:hover {
+      background-color: #EA862E;
+    }
+  }
+  li a:hover {
+    color: white;
+    background-color: orange;
+  }
+}
+
+a {
+  color: #f39b00;
+}
+
+
+
+.menu{
+  text-align: center;
+
+}
+.caption{
+text-align: center;
+}
+
+
+.number{
+  vertical-align: middle;
+  font-size: 16px;
+  padding: 4px 8px 4px 8px;
+  display: inline-block;
+  color: white;
+  background-color: orange;
+  border-radius: 50px;
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
