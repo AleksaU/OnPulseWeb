@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Pizza</title>
+    <title>OnPulse</title>
 
     <!-- Bootsrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -30,7 +30,8 @@
         <!-- <a href="tel:0442225222" class="phone">(044) 222 5 222</a>-->
        <span class="worktime">Відділення гастроентерології</span>
 
-       <button class="btn btn-warning enter">Ввійти</button>
+       <button class="btn btn-warning enter"onclick="window.location.href='registration.html'">Ввійти</button>
+
 
        </div>
           <div class="pizza">Список Пацієнтів</div>
@@ -53,35 +54,38 @@
                   <h4>Останній візит</h4>
                   <!--  <h4 id="totalBuy">0 грн</h4>-->
                 </div>
-                <div class="btn btn-warning">Редагувати рецепт</div>
+              <div class="btn btn-warning">Редагувати рецепт</div>
 
-            </div>
-        </div>
-
-                   <div class="container">
-         <div class="menu">
-             <h3 class="all-pizza-lbl">Усі пацієнти <span class="number">0</span></h3>
-             <div class="pizza_types">
-                <ul class="nav nav-pills">
-                 <li role="presentation" class="pizza-type active"><a href="#">Усі</a></li>
-                    <!-- <li role="presentation" class="pizza-type"><a href="#">Мясні</a></li>
-                     <li role="presentation" class="pizza-type"><a href="#">З ананасами</a></li>
-                     <li role="presentation" class="pizza-type"><a href="#">З морепродуктами</a></li>
-                     <li role="presentation" class="pizza-type"><a href="#">З грибами</a></li>
-                     <li role="presentation" class="pizza-type"><a href="#">Вега</a></li>-->
-            </ul>
-        </div>
-    </div>
-</div>
-
-    <div class="row"style="display:flex" id="pizza_list">
-    </div>
+              <!-- <a class="btn btn-warning buy-big">Додати рецепт</a>-->
 
 
 
-</div>
 
-<!-- jQuery JavaScript -->
+
+
+           </div>
+         </div>
+
+                    <div class="container">
+          <div class="menu">
+              <h3 class="all-pizza-lbl">Усі пацієнти <span class="number">0</span></h3>
+              <div class="pizza_types">
+                 <ul class="nav nav-pills">
+                  <li role="presentation" class="pizza-type active"><a href="#">Усі</a></li>
+
+             </ul>
+         </div>
+     </div>
+ </div>
+
+     <div class="row"style="display:flex" id="pizza_list">
+     </div>
+
+
+
+ </div>
+
+ <!-- jQuery JavaScript -->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"> </script>
 
 <!--Bootsrap JavaScript -->
