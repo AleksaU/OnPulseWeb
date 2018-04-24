@@ -37,12 +37,12 @@ function isOcean(obj) {
     else return false;
 }
 function isVega(obj) {
-    if (!obj.content.PIB && !obj.content.ocean)
+    if (!obj.content.meat && !obj.content.ocean)
         return true;
     else return false;
 }
 function isMeat(obj) {
-    if (obj.content.PIB)
+    if (obj.content.meat)
         return true;
     else return false;
 }

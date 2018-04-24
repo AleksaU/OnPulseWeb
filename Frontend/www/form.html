@@ -7,6 +7,8 @@
 
     <!-- Bootsrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Amatic SC' rel='stylesheet'>
 
     <!-- LESS основний файл -->
     <link rel="stylesheet/less" type="text/css" href="assets/less/main.less" />
@@ -66,7 +68,7 @@
 <form>
     <fieldset class="diagnose">
 
-        <legend>Інформація про пацієнта </legend>
+        <h2>Новий рецепт</h2>
         <label>Діагноз</label>
         <p><textarea rows="3" cols="50" name="text"></textarea></p><br>
 
@@ -77,7 +79,7 @@
             </div>
             <div class="DynamicExtraField">
                 <label for="DynamicExtraField">Виписати препарат </label> <input value="Видалити" type="button" class="DeleteDynamicExtraField"><br>
-                <textarea name="DynamicExtraField1[]" cols="30">Назва</textarea>
+                <textarea name="DynamicExtraField1[]" cols="30" >Назва</textarea>
                 <textarea name="DynamicExtraField2[]" cols="30">Дозування</textarea>
                 <textarea name="DynamicExtraField3[]" cols="30">Час прийому</textarea>
             </div>
