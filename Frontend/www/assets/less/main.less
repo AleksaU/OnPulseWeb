@@ -1,4 +1,4 @@
-@mainColor: #f6782f;
+@mainColor: red;
 @FlagLeft: 20px;
 @FlagWidth: 85px;
 @CartWidth: 300px;
@@ -10,17 +10,21 @@
 @import "pizza/cart";
 @import "pizza/topPanel";
 @import "pizza/toOrder";
-  body {
-    position: relative;
-   // rgba(240, 206, 20, 0.09);
-    background-color: azure;
-    padding-bottom: 100px;
-    margin-right:@CartWidth ;
-    margin-top: @NavigationHeight;
-  }
+@import "pizza/registration";
+@import "pizza/demo";
+@import "pizza/animation";
+body {
+  position: relative;
+  // rgba(240, 206, 20, 0.09);
+  background-color: #c3f9df;
+  padding-bottom: 100px;
+  margin-right:@CartWidth ;
+  margin-top: @NavigationHeight;
+}
 
 .container{
   width: 100%;
+  height: 75px;
   padding: 0;
 }
 
@@ -52,7 +56,22 @@
   margin-bottom: 15px;
 }
 
-
+.diagnose{
+  display: flex;
+  -webkit-margin-start: 2px;
+  -webkit-margin-end: 2px;
+  -webkit-padding-before: 0.35em;
+  -webkit-padding-start: 0.75em;
+  -webkit-padding-end: 0.75em;
+  -webkit-padding-after: 0.625em;
+  min-width: -webkit-min-content;
+  border-width: 3px;
+  border-style: groove;
+  border-color: threedface;
+  border-image: initial;
+  padding-left: 70px;
+  margin-left : 50px;
+}
 
 
 
@@ -80,7 +99,7 @@
   touch-action: manipulation;
   cursor: pointer;
   user-select: none;
-  background-image: none;
+  background: #32286f;
   border: 1px solid transparent;
   border-radius: 5px;
 }
@@ -97,27 +116,18 @@
 }
 
 .btn-danger{
-  background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+  background-image: linear-gradient(to bottom,#b30000 0,#b30000 100%);
   background-repeat: repeat-x;
-  border-color: #b92c28;
+  border-color: #b30000;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 
 }
 .delete {
-  background-image: linear-gradient(to bottom, #d9a22d 0, #f2c158 100%);
+  background-image: linear-gradient(to bottom, #E50909 0, #DC1A1A 100%);
   background-repeat: repeat-x;
-  border-color: #e2c139;
+  border-color: #BA87F4;
   text-shadow: 0 -1px 0 rgba(0,0,0,.2);
 }
-
-
-
-
-
-
-
-
-
 
 .count, .amount_of_orders{
   vertical-align: middle;
@@ -125,7 +135,7 @@
   padding: 4px 8px 4px 8px;
   display: inline-block;
   color: white;
-  background-color: orange;
+  background-color: #A42E2E;
   border-radius: 50px;
 
 }
@@ -137,21 +147,21 @@
   display: inline-block;
   align-content: center;
 
-  color: orange;
+  color: #32286f;
   text-align: center;
   li.active{
     a, a:hover {
-      background-color: #EA862E;
+      background-color: #32286f;
     }
   }
   li a:hover {
     color: white;
-    background-color: orange;
+    background-color: #b30000;
   }
 }
 
 a {
-  color: #f39b00;
+  color: #32286f;
 }
 
 
@@ -161,7 +171,7 @@ a {
 
 }
 .caption{
-text-align: center;
+  text-align: center;
 }
 
 
@@ -171,7 +181,7 @@ text-align: center;
   padding: 4px 8px 4px 8px;
   display: inline-block;
   color: white;
-  background-color: orange;
+  background-color: #32286f;
   border-radius: 50px;
 
 

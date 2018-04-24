@@ -2,15 +2,15 @@
 var pizza_info = [
     {
         id:1,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 1",
-        type: 'М’ясна піца',
+        type: 'Діагноз: виразкова хвороба',
         content: {
-            meat: ['ПІБ: Марченко Олена Василівна'],
-            chicken: ['Стать: Жіноча'],
+            PIB: ['ПІБ: Марченко Олена Василівна'],
+            Sex: ['Стать: Жіноча'],
             cheese: ['Дата народження: 11.12.1991']
-           //pineapple: ['ананаси'],
-           // additional: ['томатна паста', 'петрушка']
+            // pineapple: ['ананаси'],
+            // additional: ['томатна паста', 'петрушка']
         },
         small_size:{
             weight: 370,
@@ -22,20 +22,19 @@ var pizza_info = [
             size: 40,
             price: 169
         },
-        is_new:true,
-        is_popular:true
+        //is_new:true,
+        //is_popular:true
 
     },
     {
         id:2,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 2",
-        type: 'М’ясна піца',
+        type: 'Діагноз: -',
         content: {
-            meat: ['мисливські ковбаски', 'ковбаски папероні', 'шинка'],
-            cheese: ['сир домашній'],
-            mushroom: ['шампінйони'],
-            additional: ['петрушка', 'оливки']
+            PIB: ['ПІБ: Войтенко Лариса Михайлівна'],
+            cheese: ['Стать: жіноча'],
+            mushroom: ['Дата народження: 10.10.1973']
         },
         small_size:{
             weight: 460,
@@ -47,18 +46,17 @@ var pizza_info = [
             size: 40,
             price: 199
         },
-        is_popular:true
+        //is_popular:true
     },
     {
         id:3,
         icon:'assets/images/man.jpg',
         title: "Пацієнт 3",
-        type: 'М’ясна піца',
+        type: 'Діагноз: кишкове отруєння',
         content: {
-            meat: ['вітчина', 'куриця копчена'],
-            cheese: ['сир моцарелла'],
-            pineapple: ['ананаси'],
-            additional: ['кукурудза', 'петрушка', 'соус томатний']
+            PIB: ['Сахно Петро Ігорович'],
+            cheese: ['Стать : чоловіча'],
+            pineapple: ['Дата народження: 5.6.1989']
         },
         small_size:{
             weight: 430,
@@ -75,12 +73,11 @@ var pizza_info = [
         id:4,
         icon:'assets/images/man.jpg',
         title: "Пацієнт 4",
-        type: 'М’ясна піца',
+        type: 'Діагноз: кишкове отруєння',
         content: {
-            meat: ['вітчина', 'салямі'],
-            cheese: ['сир моцарелла'],
-            mushroom: ['шампінйони'],
-            additional: ['перець болгарський',  'соус томатний']
+            PIB: ['Олійник Максим Володимирович'],
+            cheese: ['Стать : чоловіча'],
+            mushroom: ['Дата народження: 4.3.1967']
         },
         small_size:{
             weight: 450,
@@ -96,15 +93,13 @@ var pizza_info = [
 
     {
         id:43,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 5",
-        type: 'М’ясна піца',
+        type: 'Діагноз: розлад шлункової системи',
         content: {
-            meat: ['ковбаски'],
-            cheese: ['сир моцарелла'],
-            mushroom: ['шампінйони'],
-            pineapple: ['ананаси'],
-            additional: ['цибуля кримська', 'огірки квашені', 'соус гірчичний']
+            PIB: ['Росоха Ольга Олександрівна'],
+            cheese: ['Стать : жіноча'],
+            mushroom: ['Дата народження: - ']
         },
         small_size:{
             weight: 470,
@@ -122,11 +117,11 @@ var pizza_info = [
         id:6,
         icon:'assets/images/man.jpg',
         title: "Пацієнт 6",
-        type: 'Морська піца',
+        type: 'Діагноз: гостре вірусне захворювання підшлункової',
         content: {
-            ocean: ['ікра червона', 'лосось копчений'],
-            cheese: ['сир моцарелла'],
-            additional: ['оливкова олія', 'вершки']
+            PIB: ['Рило Іван Іванович'],
+            cheese: ['Стать : чоловіча'],
+            additional: ['Дата народження: 23.5.1999']
         },
         small_size:{
             weight: 400,

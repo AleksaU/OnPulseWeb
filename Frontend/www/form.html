@@ -18,38 +18,77 @@
 </head>
 <body>
 
+<script type="text/javascript">
+    $('#addDynamicExtraFieldButton').click(function(event) {
+        addDynamicExtraField();
+        return false;
+    });
+    function addDynamicExtraField() {
+        var div = $('<div/>', {
+            'class' : 'DynamicExtraField'
+        }).appendTo($('#DynamicExtraFieldsContainer'));
+        var br = $('<br/>').appendTo(div);
+        var label = $('<label/>').html("Виписати препарат").appendTo(div);
+        var input = $('<input/>', {
+            value : 'Видалити',
+            type : 'button',
+            'class' : 'DeleteDynamicExtraField'
+        }).appendTo(div);
+        input.click(function() {
+            $(this).parent().remove();
+        });
+        var br = $('<br/>').appendTo(div);
+        var textarea = $('<textarea/>', {
+            name : 'DynamicExtraField1[]',
+            cols : '30',
+            rows : '2'
+        }).appendTo(div);
+        var textarea = $('<textarea/>', {
+            name : 'DynamicExtraField2[]',
+            cols : '30',
+            rows : '2'
+        }).appendTo(div);
+        var textarea = $('<textarea/>', {
+            name : 'DynamicExtraField3[]',
+            cols : '30',
+            rows : '2'
+        }).appendTo(div);
+    }
+    //Для удаления первого поля
+    $('.DeleteDynamicExtraField').click(function(event) {
+        $(this).parent().remove();
+        return false;
+    });
+
+</script>
 
 
+<form>
+    <fieldset class="diagnose">
+
+        <legend>Інформація про пацієнта </legend>
+        <label>Діагноз</label>
+        <p><textarea rows="3" cols="50" name="text"></textarea></p><br>
 
 
-<form action="registration.php">
-    <p><label for="name">Ім'я</label>
-        <input type="text" id="name"></p>
-
-    <p><label for="surname">Прізвище</label>
-        <input type="text" id="surname"></p>
-
-
-
-    <p><label for="pol">Стать</label>
-        <select name="pol" id="pol">
-            <option value="">Вказати</option>
-            <option value="1">Чоловічий</option>
-            <option value="2">Жіночий</option>
-        </select>
-    </p>
+        <div id="DynamicExtraFieldsContainer">
+            <div id="addDynamicField">
+                <input type="button" id="addDynamicExtraFieldButton" value="Додати">
+            </div>
+            <div class="DynamicExtraField">
+                <label for="DynamicExtraField">Виписати препарат </label> <input value="Видалити" type="button" class="DeleteDynamicExtraField"><br>
+                <textarea name="DynamicExtraField1[]" cols="30">Назва</textarea>
+                <textarea name="DynamicExtraField2[]" cols="30">Дозування</textarea>
+                <textarea name="DynamicExtraField3[]" cols="30">Час прийому</textarea>
+            </div>
+        </div>
 
 
-    <p><label for="diagnos">Діагноз</label>
-        <input type="text" id="diagnos"></p>
-
-
-    <p><label for="pass">Ім'я/label>
-        <input type="password" id="pass"></p>
-
-    <!--<p><input type="submit" value="Регистрация"></p>-->
+        <p><b>Дата заповнення: </b></p>
+        <input type="Date" name="Date"><br>
+        <a class="btn btn-warning buy-big"onclick="window.location.href='index.html'">Зберегти</a><br />
+    </fieldset>
 </form>
-
 
 
 

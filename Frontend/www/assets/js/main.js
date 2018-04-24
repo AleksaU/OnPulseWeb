@@ -306,12 +306,12 @@ exports.getFullAddress = getFullAddress;
 var pizza_info = [
     {
         id:1,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 1",
         type: 'Діагноз: виразкова хвороба',
         content: {
-            meat: ['ПІБ: Марченко Олена Василівна'],
-            chicken: ['Стать: Жіноча'],
+            PIB: ['ПІБ: Марченко Олена Василівна'],
+            Sex: ['Стать: Жіноча'],
             cheese: ['Дата народження: 11.12.1991']
            // pineapple: ['ананаси'],
            // additional: ['томатна паста', 'петрушка']
@@ -332,11 +332,11 @@ var pizza_info = [
     },
     {
         id:2,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 2",
         type: 'Діагноз: -',
         content: {
-            meat: ['ПІБ: Войтенко Лариса Михайлівна'],
+            PIB: ['ПІБ: Войтенко Лариса Михайлівна'],
             cheese: ['Стать: жіноча'],
             mushroom: ['Дата народження: 10.10.1973']
         },
@@ -358,7 +358,7 @@ var pizza_info = [
         title: "Пацієнт 3",
         type: 'Діагноз: кишкове отруєння',
         content: {
-            meat: ['Сахно Петро Ігорович'],
+            PIB: ['Сахно Петро Ігорович'],
             cheese: ['Стать : чоловіча'],
             pineapple: ['Дата народження: 5.6.1989']
         },
@@ -379,7 +379,7 @@ var pizza_info = [
         title: "Пацієнт 4",
         type: 'Діагноз: кишкове отруєння',
         content: {
-            meat: ['Олійник Максим Володимирович'],
+            PIB: ['Олійник Максим Володимирович'],
             cheese: ['Стать : чоловіча'],
             mushroom: ['Дата народження: 4.3.1967']
         },
@@ -397,11 +397,11 @@ var pizza_info = [
 
     {
         id:43,
-        icon:'assets/images/man.jpg',
+        icon:'assets/images/female.jpg',
         title: "Пацієнт 5",
         type: 'Діагноз: розлад шлункової системи',
         content: {
-            meat: ['Росоха Ольга Олександрівна'],
+            PIB: ['Росоха Ольга Олександрівна'],
             cheese: ['Стать : жіноча'],
             mushroom: ['Дата народження: - ']
         },
@@ -423,7 +423,7 @@ var pizza_info = [
         title: "Пацієнт 6",
         type: 'Діагноз: гостре вірусне захворювання підшлункової',
         content: {
-            meat: ['Рило Іван Іванович'],
+            PIB: ['Рило Іван Іванович'],
             cheese: ['Стать : чоловіча'],
             additional: ['Дата народження: 23.5.1999']
         },
@@ -447,10 +447,10 @@ module.exports = pizza_info;
 var ejs = require('ejs');
 
 
-exports.PizzaMenu_OneItem = ejs.compile("<%\nfunction getIngredientsArray(pizza) {\n   //Отримує вміст піци\n   var content = pizza.content;\n   var result = [];\n   //Object.keys повертає масив ключів в об’єкті JavaScript\n   Object.keys(content).forEach(function(key){\n      //a.concat(b) створює спільний масив із масивів a та b\n      result = result.concat(content[key]);\n   });\n   return result;\n}\n%>\n\n<div class=\"col-sm-6 col-md-4 cl pizza-card\">\n   <div class=\"thumbnail\">\n\n      <img class=\"pizza-icon\" src=\"<%= pizza.icon %>\" alt=\"Pizza\">\n\n       <% if(pizza.is_new) { %>\n      <span class=\"label label-danger\"></span>\n       <% } else if(pizza.is_popular) {%>\n      <span class=\"label label-success\"></span>\n       <% } %>\n\n\n      <div class=\"txt\">\n         <h3><%= pizza.title %></h3>\n         <p class=\"type\"><%= pizza.type %></p>\n         <p class=\"description\"><%= getIngredientsArray(pizza).join(\", \") %></p>\n\n      </div>\n      <div class=\"caption\">\n\n         <div class=\"options\">\n             <% if(pizza.small_size) { %>\n             <% if(pizza.big_size) { %>\n            <div class=\"option col-sm-6 col-xs-12\">\n                <% } else {%>\n               <div class=\"option col-xs-12\"> <% } %>  </div>          <a class=\"btn btn-warning buy-small\">Історія пацієнта</a>\n               </div>\n                <% } %>\n                <% if(pizza.big_size) { %>\n                <% if(pizza.small_size) { %>\n               <div class=\"option option col-sm-6 col-xs-12 \">\n                   <% } else {%>\n                  <div class=\"option col-xs-12\">\n                      <% } %>\n                        <a class=\"btn btn-warning buy-big\"onclick=\"window.location.href='form.html'\">Додати рецепт</a>\n                  </div>\n                   <% } %>\n               </div>\n            </div>\n         </div>\n      </div>\n\n");
+exports.PizzaMenu_OneItem = ejs.compile("<%\nfunction getIngredientsArray(pizza) {\n   //Отримує вміст піци\n   var content = pizza.content;\n   var result = [];\n   //Object.keys повертає масив ключів в об’єкті JavaScript\n   Object.keys(content).forEach(function(key){\n      //a.concat(b) створює спільний масив із масивів a та b\n      result = result.concat(content[key]);\n   });\n   return result;\n}\n%>\n\n<div class=\"col-sm-6 col-md-4 cl pizza-card\">\n   <div class=\"thumbnail\">\n\n      <img class=\"pizza-icon\" src=\"<%= pizza.icon %>\">\n\n       <% if(pizza.is_new) { %>\n      <span class=\"label label-danger\"></span>\n       <% } else if(pizza.is_popular) {%>\n      <span class=\"label label-success\"></span>\n       <% } %>\n\n\n      <div class=\"txt\">\n         <h3><%= pizza.title %></h3>\n         <p class=\"type\"><%= pizza.type %></p>\n         <p class=\"description\"><%= getIngredientsArray(pizza).join(\", \") %></p>\n\n      </div>\n      <div class=\"caption\">\n\n         <div class=\"options\">\n             <% if(pizza.small_size) { %>\n             <% if(pizza.big_size) { %>\n            <div class=\"option col-sm-6 col-xs-12\">\n                <% } else {%>\n               <div class=\"option col-xs-12\"> <% } %>  </div>          <a class=\"btn btn-warning buy-small\"onclick=\"window.location.href='patientHistory.html'\">Історія пацієнта</a>\r\n               </div>\r\n                <% } %>\n                <% if(pizza.big_size) { %>\n                <% if(pizza.small_size) { %>\n               <div class=\"option option col-sm-6 col-xs-12 \">\n                   <% } else {%>\n                  <div class=\"option col-xs-12\">\n                      <% } %>\n                        <a class=\"btn btn-warning buy-big\"onclick=\"window.location.href='form.html'\">Додати рецепт</a>\r\n               </div>\r\n                 <% } %>\n               </div>\n            </div>\n         </div>\n      </div>\n\n");
 
-exports.PizzaCart_OneItem = ejs.compile("<div class=\"oneItem\">\n\n  <span class=\"name\"> <%= pizza.content.meat %>" +
-    " <% if(size===\"small_size\") { %>\n\nІсторія пацієнта</span>\n    <div class=\"labels\">\n </div>\n    <% } else if(size===\"big_size\") {%>\n\nНовий рецепт</span>\n    <div class=\"labels\">\n     </div>\n    <% } %>\n    <div class=\"actions\"> <button class=\"btn btn-default btn-circle delete \">&#x2718;</button>\n    </div>\n\n    <div class=\"image\"><img src=\"<%= pizza.icon %>\"></div>\n\n</div>\n");
+exports.PizzaCart_OneItem = ejs.compile("<div class=\"oneItem\">\n\n  <span class=\"name\"> <%= pizza.content.PIB %>" +
+    " <% if(size===\"small_size\") { %>\n\nІсторія пацієнта</span>\n    <div class=\"labels\">\n </div>\n    <% } else if(size===\"big_size\") {%> <div class=\"labels\">\n     </div>\n    <% } %>\n    <div class=\"actions\"> <button class=\"btn btn-default btn-circle delete \">&#x2718;</button>\n    </div>\n\n    <div class=\"image\"><img src=\"<%= pizza.icon %>\"></div>\n\n</div>\n");
 
 },{"ejs":12}],6:[function(require,module,exports){
 /**
@@ -696,12 +696,12 @@ function isOcean(obj) {
     else return false;
 }
 function isVega(obj) {
-    if (!obj.content.meat && !obj.content.ocean)
+    if (!obj.content.PIB && !obj.content.ocean)
         return true;
     else return false;
 }
 function isMeat(obj) {
-    if (obj.content.meat)
+    if (obj.content.PIB)
         return true;
     else return false;
 }
